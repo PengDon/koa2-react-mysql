@@ -1,0 +1,48 @@
+{
+  "name": "koa-examples",
+  "description": "Examples using Koa",
+  "version": "0.0.1",
+  "repository": "https://github.com/koajs/examples",
+  "bugs": "https://github.com/koajs/examples/issues",
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "busboy": "^0.2.14",
+    "ejs": "^2.5.7",
+    "fs-promise": "^2.0.3",
+    "fs.promised": "^3.0.0",
+    "koa": "^2.2.0",
+    "koa-art-template": "^1.1.1",
+    "koa-basic-auth": "^2.0.0",
+    "koa-body": "^2.0.1",
+    "koa-compose": "^4.0.0",
+    "koa-csrf": "^3.0.6",
+    "koa-logger": "^3.0.0",
+    "koa-mongo": "^0.8.0",
+    "koa-mysql-session": "^0.0.2",
+    "koa-router": "^7.2.0",
+    "koa-session": "^5.0.0",
+    "koa-session-minimal": "^3.0.4",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.1.2",
+    "mysql": "^2.15.0",
+    "streaming-json-stringify": "^3.1.0",
+    "supertest": "^3.0.0",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "mocha": "*",
+    "should": "^3.3.2",
+    "supertest": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 7.6"
+  },
+  "license": "MIT"
+}
