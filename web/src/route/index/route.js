@@ -18,7 +18,8 @@ import {
     {path:'/',component:HomeComponent, exact:true,notCheckLogin:true},
     {path:'/login',component:LoginComponent,notCheckLogin:true},
     {path:'/detail',component:Pages.Detail,notCheckLogin:true},
-    {path:'/my',component:Pages.My}
+    {path:'/my',component:Pages.My},
+    {path:'/user',component:Pages.User,notCheckLogin:true}
   ];
 
   const isLogin=()=>{

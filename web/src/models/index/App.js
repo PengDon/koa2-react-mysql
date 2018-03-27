@@ -36,6 +36,7 @@ class App extends Component {
       
             <li> <a href="#/detail">detail</a></li>
             <li> <a href="#/my">我的页面需要登录验证</a></li>
+            <li> <a href="#/user">用户列表</a></li>
           </ul>
             {
               this.state.userName ? <button onClick={this.logout}>登出</button>  :  <a href="#/login">login</a>
