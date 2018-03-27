@@ -22,6 +22,4 @@ const router = require("./route/index");
 app.use(router.routes()).use(router.allowedMethods());
 
 // 启动koa监听，端口可以自定义
-app.listen(3002,()=>{
-    console.log("port 3002");
-}); 
+app.listen(3002); 

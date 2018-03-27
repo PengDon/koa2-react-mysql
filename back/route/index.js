@@ -5,6 +5,6 @@ const user = require("./user");
 
 
 router.use("/",home.routes(),home.allowedMethods());
-router.use("/user",user.routes(),user.allowedMethods());
+router.use(user.routes(),user.allowedMethods());
 
 module.exports = router;
