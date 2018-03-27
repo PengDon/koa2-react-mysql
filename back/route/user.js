@@ -5,7 +5,7 @@ const UserController = require("../controller/user");
 
 // 根据用户id查询
 router.get("/user/:name",async(ctx)=>{
-    console.log('===111==='+ctx.params.name);
+    console.log(ctx.params);
     ctx.body = await UserController.queryUserByName(ctx);
 });
 // 查詢用户列表
