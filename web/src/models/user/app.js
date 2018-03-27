@@ -5,7 +5,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      userList:''
+      userList:[]
     };
   }
 
@@ -13,7 +13,6 @@ class App extends Component {
   getUserList = async() =>{
      let result;
      result = await api.queryUser();
-     console.log(result);
      this.setState({userList:result});
   }
 
@@ -22,11 +21,17 @@ class App extends Component {
   }
 
   render() {
-    
+    const userList = this.state.userList;
+    const listItems = userList.map((user) =>
+      <li key={user.ID}>
+        <div>姓名：{user.realname}</div>
+        <div>密码：{user.password}</div>
+      </li>
+    );
 
     return (
       <div>
-         个人中心
+         <ul>{listItems}</ul>
       </div>
     );
   }
