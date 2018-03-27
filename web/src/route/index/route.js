@@ -11,21 +11,14 @@ import {
     // Link
   } from 'react-router-dom';
 
-  // const {Home,Login} = Pages;
-  
   const LoginComponent = Pages.Login; // 登录页内容
   const HomeComponent = Pages.Home; // 首页内容
  
-  // notCheckLogin:true ==>表示用验证是否登录  
   const routes = [
     {path:'/',component:HomeComponent, exact:true,notCheckLogin:true},
     {path:'/login',component:LoginComponent,notCheckLogin:true},
     {path:'/detail',component:Pages.Detail,notCheckLogin:true},
-    {path:'/my',component:Pages.My},
-    {path:'/test',component:Pages.Test,notCheckLogin:true},
-    {path:'/shop/:id',component:Pages.Shop,notCheckLogin:true},
-    {path:'/comment',exact:true,component:Pages.compentApp.App},
-    {path:'/comment/id',exact:true,component:Pages.compentApp.Detail}
+    {path:'/my',component:Pages.My}
   ];
 
   const isLogin=()=>{
