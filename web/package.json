@@ -90,7 +90,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://www.don.me",
+  "proxy": "http://localhost:3002",
   "devDependencies": {
     "mockjs": "^1.0.1-beta3"
   }

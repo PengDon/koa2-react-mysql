@@ -4,11 +4,21 @@ class User extends Server {
     constructor() {
       super();
     }
+    
+    async queryUserByName(name) {
+         let result;
+         try {
+            result = await this.post('/user/'+name);
+        } catch (error) {
+            throw error;
+        }
+         return result;
+    }
 
     async queryUser() {
         let result;
         try {
-            result = await this.get('http://localhost:3002/user');
+            result = await this.get('/user');
         } catch (error) {
             throw error;
         }

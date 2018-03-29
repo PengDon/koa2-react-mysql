@@ -4,7 +4,7 @@ const User = require("../service/user");
 const UserController = require("../controller/user");
 
 // 根据用户id查询
-router.get("/user/:name",async(ctx)=>{
+router.post("/user/:name",async(ctx)=>{
     console.log(ctx.params);
     ctx.body = await UserController.queryUserByName(ctx);
 });
