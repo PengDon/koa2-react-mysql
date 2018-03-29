@@ -22,10 +22,12 @@ class App extends Component {
   }
 
   handleChange = async (event) => {
-    console.log(event.target.value);
-    let result;
-    result = await api.queryUserByName(event.target.value);
-    this.setState({ userList: result });
+    let val = event.target.value;
+    setTimeout(async()=>{
+      let result;
+      result = await api.queryUserByName(val);
+      this.setState({ userList: result });
+    },2000);
   }
 
   render() {
