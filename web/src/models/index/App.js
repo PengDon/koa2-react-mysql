@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Cookie from '../../utils/cookie';
-// import { Button } from '../../components/weui';
 import '../../assets/style/don.less';
+import don from '../../components/all';
 
 class App extends Component {
   
@@ -27,12 +27,17 @@ class App extends Component {
      window.location.reload();
     //  window.location.replace('#/login');
   }  
+
+  showTip = ()=>{
+    don.alert("标题",{ title: '自定义标题' });
+  }
+
   render() {
     return (
       <div>
         <h1>首页</h1>
         <p>欢迎{this.state.userName}</p>
-        <input type="button" value="按钮" className="don-btn_warn"/>
+        <input type="button" value="按钮" className="don-btn_primary" onClick={this.showTip}/>
         <ul>
       
             <li> <a href="#/detail">detail</a></li>

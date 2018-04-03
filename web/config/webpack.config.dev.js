@@ -210,6 +210,15 @@ const webpackDevConfig = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+          {
+            test: /\.(html)$/,
+            use: {
+              loader: require.resolve('html-loader'),
+              options: {
+                
+              }
+            }
+          },
         ],
       },
       // ** STOP ** Are you adding a new loader?
