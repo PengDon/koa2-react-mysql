@@ -29,7 +29,8 @@ class App extends Component {
   }  
 
   showTip = ()=>{
-    don.alert("标题",{ title: '自定义标题' });
+    // don.alert("德州扒鸡",{ title: '66元一只' });
+    don.confirm('普通的confirm')
   }
 
   render() {

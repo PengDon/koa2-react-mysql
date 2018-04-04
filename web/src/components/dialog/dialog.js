@@ -38,7 +38,7 @@ let _sington;
  *      console.log('`dialog` has been hidden');
  * });
  */
-const dialog = (options = {}) => {
+function dialog(options = {}) {
     if(_sington) return _sington;
 
     const isAndroid = $.os.android;
@@ -58,26 +58,26 @@ const dialog = (options = {}) => {
     const $dialog = $dialogWrap.find('.don-dialog');
     const $mask = $dialogWrap.find('.don-mask');
 
-    let _hide = (callback) =>{
+    function _hide(callback){
         _hide = $.noop; // 防止二次调用导致报错
 
         $mask.addClass('don-animate-fade-out');
         $dialog
             .addClass('don-animate-fade-out')
-            .on('animationend webkitAnimationEnd',() => {
+            .on('animationend webkitAnimationEnd', function () {
                 $dialogWrap.remove();
                 _sington = false;
                 callback && callback();
             });
     }
-    let hide = (callback) => { _hide(callback); }
+    function hide(callback){ _hide(callback); }
 
     $('body').append($dialogWrap);
     // 不能直接把.don-animate-fade-in加到$dialog，会导致mask的z-index有问题
     $mask.addClass('don-animate-fade-in');
     $dialog.addClass('don-animate-fade-in');
 
-    $dialogWrap.on('click', '.don-dialog__btn',(evt) => {
+    $dialogWrap.on('click', '.don-dialog__btn', function (evt) {
         const index = $(this).index();
         if (options.buttons[index].onClick) {
             if (options.buttons[index].onClick.call(this, evt) !== false) hide();
